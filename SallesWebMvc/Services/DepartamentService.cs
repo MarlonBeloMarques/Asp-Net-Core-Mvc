@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SallesWebMvc.Models;
+using System.Linq;
 
 namespace SallesWebMvc.Services
 {
-    public class SellerService
+    public class DepartamentService
     {
         private readonly SallesWebMvcContext _context;
 
-        public SellerService(SallesWebMvcContext context)
+        public DepartamentService(SallesWebMvcContext context)
         {
             _context = context;
         }
 
-        public List<Seller> FindAll()
+        public List<Departament> FindAll()
         {
-            return _context.Seller.ToList();
-        }
-
-        public void Insert(Seller obj)
-        {
-            _context.Add(obj);
-            _context.SaveChanges();
+            return _context.Departament.OrderBy(x => x.Name).ToList();
         }
     }
 }
