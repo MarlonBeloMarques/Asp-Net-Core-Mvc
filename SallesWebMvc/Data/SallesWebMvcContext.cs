@@ -8,10 +8,8 @@ namespace SallesWebMvc.Models
 {
     public class SallesWebMvcContext : DbContext
     {
-        public SallesWebMvcContext (DbContextOptions<SallesWebMvcContext> options)
-            : base(options)
-        {
-        }
+        public SallesWebMvcContext (DbContextOptions<SallesWebMvcContext> options) : base(options)
+        { }
 
         public DbSet<Departament> Departament { get; set; }
         public DbSet<Seller> Seller { get; set; }
