@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SallesWebMvc.Models;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace SallesWebMvc.Services
